@@ -75,15 +75,15 @@ export const ChatProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setMessages({ [OFFICIAL_CHAT_ID]: [welcomeMessage] });
 
       // Load from localStorage
-      const savedChats = localStorage.getItem(`spektr_chats_${user.id}`);
-      const savedMessages = localStorage.getItem(`spektr_messages_${user.id}`);
+      const savedChatsData = localStorage.getItem(`spektr_chats_${user.id}`);
+      const savedMessagesData = localStorage.getItem(`spektr_messages_${user.id}`);
 
-      if (savedChats) {
-        setChats(JSON.parse(savedChats));
+      if (savedChatsData) {
+        setChats(JSON.parse(savedChatsData));
       }
 
-      if (savedMessages) {
-        setMessages(JSON.parse(savedMessages));
+      if (savedMessagesData) {
+        setMessages(JSON.parse(savedMessagesData));
       }
     }
   }, [user]);
