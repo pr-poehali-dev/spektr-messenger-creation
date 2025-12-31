@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "Test login endpoint",
+      "method": "POST",
+      "path": "/?action=login",
+      "body": {
+        "username": "spektr",
+        "password": "zzzz-2014"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "user": {
+          "username": "spektr"
+        }
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test invalid login",
+      "method": "POST",
+      "path": "/?action=login",
+      "body": {
+        "username": "invalid",
+        "password": "wrong"
+      },
+      "expectedStatus": 401,
+      "expectedBody": {
+        "success": false
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -48,6 +48,8 @@ export interface Chat {
   unreadCount: number;
 }
 
-export type Theme = 'crystal' | 'purple-lime' | 'dark-blue' | 'white-black' | 'blue-light';
+export type Theme = 'crystal' | 'purple-lime' | 'dark-blue' | 'white-black' | 'blue-light' | 'sunset' | 'forest' | 'ocean' | 'rose' | 'midnight';
 
 export type Language = 'ru' | 'en';
+
+export type View = 'chats' | 'chat' | 'profile' | 'search';
